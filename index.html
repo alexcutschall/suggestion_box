@@ -8,9 +8,18 @@ css/bootstrap.min.css" rel="stylesheet">
   <body ng-app="SuggestionBox">
     <div ng-controller="HomeController">
       <h1>{{ helloWorld }}</h1>
-      <div ng-repeat="post in posts">
+      <div ng-repeat="post in posts | orderBy:'-upvotes'">
         {{ post.title }}
+        {{ post.upvotes | number }}
+        {{ post.comments }}
       </div>
+
+      <form ng-submit="addSuggestion()" style="margin-top: 50px">
+        <h3>Submit Your Suggestion!</h3>
+        <input type="text" class="form-control" ng-model="title" placeholder="Great ideas go here...">
+        </input>
+        <button type="submit" class="btn btn-primary">Suggest</button>
+      </form>
     </div>
 
 
