@@ -7,7 +7,7 @@
         Upvotes: {{ post.upvotes | number }}
       </span>
     </p>
-    {{ post.comments }}
+    <a href="#/suggestion/{{$index}}">Comments</a>
   </div>
 
   <form ng-submit="addSuggestion()" style="margin-top: 50px">
