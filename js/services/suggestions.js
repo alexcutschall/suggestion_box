@@ -1,25 +1,25 @@
-app.factory('suggestions', [function() {
+app.factory("suggestions", [function() {
   let demoSuggestions = {
     posts: [
       {
         title: "We should get pizza",
         upvotes: 15,
-        comments: []
+        comments: [],
       },
       {
         title: "We should all sing songs",
         upvotes: 20,
-        comments: []
+        comments: [],
       },
       {
         title: "We should do some crazy things",
         upvotes: 2,
-        comments: []
+        comments: [],
       },
       {
         title: "We should just play video games",
         upvotes: 100,
-        comments: []
+        comments: [],
       }
     ]
   };
