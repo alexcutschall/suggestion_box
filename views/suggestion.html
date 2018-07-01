@@ -1,0 +1,12 @@
+<h1>{{ post }}</h1>
+
+<div ng-repeat="comment in post.comments">
+  <p>
+    {{ comment.body }}
+  </p>
+  <p>
+    <span class="glyphicon glyphicon-plus-sign" ng-click="upvoteComment(comment)">
+    </span>
+    Upvotes: {{ comment.upvotes }}
+  </p>
+</div>
