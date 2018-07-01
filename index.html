@@ -10,7 +10,12 @@ css/bootstrap.min.css" rel="stylesheet">
       <h1>{{ helloWorld }}</h1>
       <div ng-repeat="post in posts | orderBy:'-upvotes'">
         {{ post.title }}
-        {{ post.upvotes | number }}
+        <p>
+          <span class="glyphicon glyphicon-plus-sign"
+          ng-click="addUpvote(post)">
+            Upvotes: {{ post.upvotes | number }}
+          </span>
+        </p>
         {{ post.comments }}
       </div>
 
